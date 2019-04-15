@@ -20,15 +20,15 @@
   <!-- Mobile viewport optimized: h5bp.com/viewport -->
   <meta name="viewport" content="width=device-width">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />  
+
 
   {% block css %}{% endblock %}
 
 </head>
 <body class="{% block body_class %}{% endblock %}">
 {% block body %}
-{% with form=form  %}
-{% include "nav.html" %}
-{% endwith %}
+
 
 <header>{% block header %}{% endblock %}</header>
 
@@ -51,8 +51,6 @@
 {% block content %}{% endblock %}
 </main>
 
-
-{% include "footer.html" %}
 
 <!-- JavaScript at the bottom for fast page loading -->
 {% block js %}{% endblock %}

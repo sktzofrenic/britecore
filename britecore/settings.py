@@ -14,7 +14,7 @@ env.read_env()
 ENV = env.str('FLASK_ENV', default='production')
 DEBUG = ENV == 'development'
 SQLALCHEMY_DATABASE_URI = env.str('DATABASE_URL')
-SECRET_KEY = env.str('SECRET_KEY')
+SECRET_KEY = env.str('SECRET_KEY', default='not so secret')
 BCRYPT_LOG_ROUNDS = env.int('BCRYPT_LOG_ROUNDS', default=13)
 DEBUG_TB_ENABLED = DEBUG
 DEBUG_TB_INTERCEPT_REDIRECTS = False
