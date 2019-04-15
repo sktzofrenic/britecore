@@ -3,7 +3,7 @@
 from flask import Flask, render_template
 
 from britecore import commands, public, user
-from britecore.extensions import bcrypt, cache, csrf_protect, db, debug_toolbar, login_manager, migrate, webpack
+from britecore.extensions import bcrypt, db, login_manager, migrate
 
 
 def create_app(config_object='britecore.settings'):
@@ -24,13 +24,9 @@ def create_app(config_object='britecore.settings'):
 def register_extensions(app):
     """Register Flask extensions."""
     bcrypt.init_app(app)
-    cache.init_app(app)
     db.init_app(app)
-    csrf_protect.init_app(app)
     login_manager.init_app(app)
-    debug_toolbar.init_app(app)
     migrate.init_app(app, db)
-    webpack.init_app(app)
     return None
 
 

@@ -25,7 +25,7 @@ pip-log.txt
 .tox
 nosetests.xml
 
-# Translations
+# Translations 
 *.mo
 
 # Mr Developer
@@ -44,6 +44,7 @@ docs/_build
 
 # Virtualenvs
 env/
+.vscode/
 
 # npm
 /node_modules/
